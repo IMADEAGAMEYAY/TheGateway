@@ -1,7 +1,7 @@
 const maxAttempts = 3; // Maximum allowed attempts
 const lockoutDurationHours = 24; // Lockout duration in hours
 const localStorageKey = 'passwordAttempts'; // Key for localStorage
- 
+
 // Event listener for form submission
 document.getElementById('passwordValidation').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission
