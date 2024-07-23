@@ -4,13 +4,13 @@
     <style>
         /* CSS for arranging links and images */
         .link-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            max-width: 800px; /* Adjust as needed */
-            margin: 0 auto; /* Centers the links */
-            padding: 20px; /* Adds spacing around links */
-        }
+    display: none; /* Initially hide link-container */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto; /* Centers the links */
+    padding: 20px; /* Adds spacing around links */
+}
         .link-item {
             width: 48%; /* Each link takes up about half of the container */
             margin-bottom: 10px; /* Space between rows */
@@ -34,10 +34,51 @@
             font-family: Arial, sans-serif; /* Optional: Set a preferred font */
             padding: 20px; /* Adds padding around the content */
         }
-        
+        .password-form {
+            max-width: 400px;
+            margin: 100px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .password-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .password-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
+
+<!--
+document.write(unescape('%3C%6C%69%6E%6B%20%72%65%6C%3D%22%73%74%79%6C%65%73%68%65%65%74%22%20%68%72%65%66%3D%22%73%74%79%6C%65%73%2F%63%73%73%2E%63%73%73%22%20%74%79%70%65%3D%22%74%65%78%74%2F%63%73%73%22%20%6D%65%64%69%61%3D%22%73%63%72%65%65%6E%22%20%2F%3E%0A%3C%73%63%72%69%70%74%20%74%79%70%65%3D%22%74%65%78%74%2F%6A%61%76%61%73%63%72%69%70%74%22%20%73%72%63%3D%22%73%63%72%69%70%74%2F%6A%73%2E%6A%73%22%20%6C%61%6E%67%75%61%67%65%3D%22%6A%61%76%61%73%63%72%69%70%74%22%3E%3C%2F%73%63%72%69%70%74%3E%0A'));
+//-->
+
+<div class="password-form" id="passwordForm">
+    <form id="passwordValidation">
+        <label for="password">Enter the password to access:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p id="passwordError" style="color: red; display: none;">Incorrect password. Please try again.</p>
+</div>
+
+<script src="links.js"></script>
+
 
 <div class="link-container">
     <div class="link-item">
@@ -125,6 +166,3 @@
         <a href="https://github.com/TASEmulators/desmume/releases/download/release_0_9_13/desmume-0.9.13-win64.zip">DeSmuMe (.nds,.gba emulator)</a>
     </div>
 </div>
-
-</body>
-</html>
