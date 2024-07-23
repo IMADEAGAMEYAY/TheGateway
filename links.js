@@ -9,7 +9,7 @@ document.getElementById('passwordValidation').addEventListener('submit', functio
     const password = document.getElementById('password').value;
 
     // Check password
-    if (password === 'VGhlIEdhdGV3YXk=') { // Replace 'your_password_here' with your actual password
+    if (password === (correctpassword)) { // Replace 'your_password_here' with your actual password
         unlock(); // Reset attempts and unlock if correct
         var linkContainers = document.getElementsByClassName("link-container");
         document.getElementById('passwordForm').style.display = 'none'; // Hide password form
@@ -54,7 +54,7 @@ function unlock() {
     document.getElementById('passwordError').style.display = 'none'; // Hide error message
     document.getElementById('lockoutMessage').style.display = 'none'; // Hide lockout message
 }
-
+var decodedStringBtoA = 'The Gateway';
 // Function to check if user is currently locked out
 function isLockedOut() {
     const lockoutTime = localStorage.getItem('lockoutTime');
@@ -87,7 +87,7 @@ function loadLinks() {
         <!-- Add more link items as needed -->
     `;
 }
-
+var correctpassword = btoa(decodedStringBtoA);
 // Check if user is already locked out on page load
 if (isLockedOut()) {
     lock(); // Display lockout message if still locked out
