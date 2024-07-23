@@ -9,7 +9,7 @@ document.getElementById('passwordValidation').addEventListener('submit', functio
     const password = document.getElementById('password').value;
 
     // Check password
-    if (password === 'your_password_here') { // Replace 'your_password_here' with your actual password
+    if (password === 'VGhlIEdhdGV3YXk=') { // Replace 'your_password_here' with your actual password
         unlock(); // Reset attempts and unlock if correct
         var linkContainers = document.getElementsByClassName("link-container");
         document.getElementById('passwordForm').style.display = 'none'; // Hide password form
