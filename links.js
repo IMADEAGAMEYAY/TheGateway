@@ -15,6 +15,7 @@ document.getElementById('passwordValidation').addEventListener('submit', functio
         document.getElementById('passwordForm').style.display = 'none'; // Hide password form
         for (var i = 0; i < linkContainers.length; i++) {
             linkContainers[i].style.display = "flex";
+            document.getElementByClassName("search_bar").style.display = "flex";
         }
         loadLinks(); // Load links after unlocking
     } else {
