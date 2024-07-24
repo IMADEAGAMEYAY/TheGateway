@@ -80,9 +80,9 @@ document.write(unescape('%3C%6C%69%6E%6B%20%72%65%6C%3D%22%73%74%79%6C%65%73%68%
 
 
 <script src="links.js"></script>
+<input id="search-input" type="text" placeholder="Search for a game...">
 
-
-<div class="link-container">
+<div class="link-container" id="game-list">
     <div class="link-item">
         <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fencrypted-tbn1.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcQ-7jYWpOFMK1imGg8oNaFHQgeFvXsPkmzkjDqvEXwrzN5hehUf&psig=AOvVaw0hgYfXAV4OXgnmdQ5LZmYd&ust=1721788710749000&source=images&cd=vfe&opi=89978449&ved=0CA4QjRxqFwoTCPj1-PWQvIcDFQAAAAAdAAAAABAE" alt="Pokemon Let's Go Pikachu">
         <a href="https://gofile.io/d/5rFmvG">Pokemon Let's Go Pikachu!</a>
@@ -212,3 +212,21 @@ document.write(unescape('%3C%6C%69%6E%6B%20%72%65%6C%3D%22%73%74%79%6C%65%73%68%
         <a href="https://downloads.romspedia.com/roms/Pokemon%20-%20Fire%20Red%20Version%20(U)%20(V1.1).zip">Pokemon Fire Red</a>
     </div>
 </div>
+<script>
+  const searchInput = document.getElementById('search-input');
+  const gameList = document.getElementById('game-list');
+  const games = gameList.children;
+
+  searchInput.addEventListener('input', (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    for (let i = 0; i < games.length; i++) {
+      const game = games[i];
+      const gameText = game.textContent.toLowerCase();
+      if (gameText.includes(searchTerm)) {
+        game.style.display = 'block';
+      } else {
+        game.style.display = 'none';
+      }
+    }
+  });
+</script>
