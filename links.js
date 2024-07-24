@@ -15,7 +15,7 @@ document.getElementById('passwordValidation').addEventListener('submit', functio
         document.getElementById('passwordForm').style.display = 'none'; // Hide password form
         for (var i = 0; i < linkContainers.length; i++) {
             linkContainers[i].style.display = "flex";
-            document.getElementByClassName("search_bar").style.display = "flex";
+            
         }
         loadLinks(); // Load links after unlocking
     } else {
@@ -54,6 +54,7 @@ function unlock() {
     localStorage.removeItem('lockoutTime'); // Remove lockout time from localStorage
     document.getElementById('passwordError').style.display = 'none'; // Hide error message
     document.getElementById('lockoutMessage').style.display = 'none'; // Hide lockout message
+    document.getElementByClassName("search_bar").style.display = "flex";
 }
 var decodedStringBtoA = 'The Gateway';
 // Function to check if user is currently locked out
