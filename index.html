@@ -2,41 +2,77 @@
 <html>
 <head>
     <style>
-        /* CSS for arranging links and images */
-        .link-container {
-    display: none; /* Initially hide link-container */
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 800px; /* Adjust as needed */
-    margin: 0 auto; /* Centers the links */
-    padding: 20px; /* Adds spacing around links */
-}
-        .search_bar{
-            display: none;
-        }
-        .link-item {
-            width: 48%; /* Each link takes up about half of the container */
-            margin-bottom: 10px; /* Space between rows */
-            text-align: center; /* Centers text and images */
-        }
-        .link-item img {
-            max-width: 100%; /* Ensure images don't exceed container width */
-            height: auto; /* Maintain aspect ratio */
-            margin-bottom: 10px; /* Space between image and link */
-        }
-                .link-item a {
-            font-size: 18px; /* Larger font size for links */
-            font-weight: bold; /* Bold font weight */
-            text-decoration: none; /* Remove underline from links */
-            color: #ffffff; /* Dark gray text color */
-            display: block; /* Makes the whole link clickable */
-            text-align: center; /* Centers the link text */
-        }
+        /* General Styles */
         body {
-            background-color: #575757; /* Light gray background */
-            font-family: Arial, sans-serif; /* Optional: Set a preferred font */
-            padding: 20px; /* Adds padding around the content */
+            background-color: #575757;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
         }
+        
+        /* Header */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        /* Banner Message */
+        .banner-message {
+            background-color: #FFD700;
+            text-align: center;
+            padding: 10px;
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Link Container */
+        .link-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Link Item */
+        .link-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 22%;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .link-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .link-item a {
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #4CAF50;
+            transition: color 0.3s ease;
+        }
+
+        .link-item a:hover {
+            color: #2E8B57;
+        }
+
+        /* Password Form */
         .password-form {
             max-width: 400px;
             margin: 100px auto;
@@ -46,6 +82,7 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         .password-form input[type="password"] {
             width: 100%;
             padding: 10px;
@@ -54,6 +91,7 @@
             border-radius: 4px;
             box-sizing: border-box;
         }
+
         .password-form input[type="submit"] {
             width: 100%;
             padding: 10px;
@@ -62,6 +100,22 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+        }
+
+        .password-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Search Bar */
+        .search_bar {
+            width: 100%;
+            max-width: 600px;
+            padding: 10px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: block;
+            font-size: 16px;
         }
     </style>
 </head>
