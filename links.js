@@ -54,7 +54,7 @@ function unlock() {
     localStorage.removeItem('lockoutTime'); // Remove lockout time from localStorage
     document.getElementById('passwordError').style.display = 'none'; // Hide error message
     document.getElementById('lockoutMessage').style.display = 'none'; // Hide lockout message
-    document.getElementById('search-input').style.display = 'flex';
+    document.getElementById('search_input').style.display = 'flex';
 }
 var decodedStringBtoA = 'The Gateway';
 // Function to check if user is currently locked out
