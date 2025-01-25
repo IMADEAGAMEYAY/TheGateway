@@ -32,7 +32,7 @@
 
         /* Link Container */
         .link-container {
-            display: none;
+            display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             gap: 20px;
@@ -332,13 +332,20 @@
 
 <!-- Main content of the page -->
 <div class="content">
-    <h1>Emulators</h1>
+
 </div>
 
 <!-- Arrow to the right side of the screen -->
 <div class="arrow-container">
-    <div class="arrow" onclick="window.location.href='newpage.html';"></div>
+    <div class="arrow" id="clickable-div"></div>
 </div>
+<a id="hidden-link" href="https://imnotjakexd.github.io/Emulator/" style="display: none;"></a>
+    <script>
+        // When the div is clicked, the hidden link is triggered
+        document.getElementById('clickable-div').onclick = function() {
+            document.getElementById('hidden-link').click();
+        }
+    </script>
 
 </body>
 </html>
